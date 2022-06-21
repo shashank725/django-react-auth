@@ -1,2 +1,8 @@
 # Virtual Envirnment
 venv/
+
+# __pycache__
+__pycache__
+api/__pycache__
+api/migrations/__pycache__
+djangoAuth/__pycache__
