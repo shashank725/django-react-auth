@@ -2,9 +2,11 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+import dotenv              #django-dotenv pacakage
 
 
 def main():
+    dotenv.read_dotenv()    #django-dotenv pacakage
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'djangoAuth.settings')
     try:

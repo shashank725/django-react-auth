@@ -6,3 +6,9 @@ __pycache__
 api/__pycache__
 api/migrations/__pycache__
 djangoAuth/__pycache__
+
+# .env
+.env
+
+# temp files
+tempCodeRunnerFile.py
