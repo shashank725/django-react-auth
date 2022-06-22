@@ -5,10 +5,12 @@ from rest_framework import status
 from django.contrib.auth import authenticate, login, logout
 
 from api.serializers import UserRegistrationSerializer, UserLoginSerializer
+from .renderers import UserRenderers
 
 # Create your views here.
 
 class UserRegistrationView(APIView):
+    renderer_classes = [UserRenderers]
     def post(self, request, format=None):
         serializer = UserRegistrationSerializer(data=request.data)
         if serializer.is_valid(raise_exception=True):
@@ -19,6 +21,7 @@ class UserRegistrationView(APIView):
 
 
 class UserLoginView(APIView):
+    renderer_classes = [UserRenderers]
     def post(self, request, format=None):
         serializer = UserLoginSerializer(data=request.data)
         if serializer.is_valid(raise_exception=True):
