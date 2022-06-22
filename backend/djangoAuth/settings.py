@@ -136,7 +136,8 @@ AUTH_USER_MODEL = 'api.User'             #To use User in models.py
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
+    ),
+    # 'DEFAULT_RENDERER_CLASSES':('rest_framework.renderers.JSONRenderer',)    #To disable browserable api in production
 }
 
 from datetime import timedelta 
