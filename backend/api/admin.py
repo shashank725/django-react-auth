@@ -15,8 +15,9 @@ class UserModelAdmin(BaseUserModelAdmin):
         ('Personal info', {'fields': ('name', 'tc')}),
         ('Permissions', {'classes': ('collapse',), 'fields': ('is_admin',)}),
     )
-    # add_fieldsets is not a standard ModelAdmin attribute. UserModelAdmin overrides get_fieldsets to use this attribute when creating a user.
-    add_fieldsets = (
+    # add_fieldsets is not a standard ModelAdmin attribute. 
+    # UserModelAdmin overrides get_fieldsets to use this attribute when creating a user.
+    add_fieldsets = (            #Displayed when creating a user
         (None, {
             'classes': ('wide',),
             'fields': ('email', 'name', 'tc', 'password1', 'password2'),

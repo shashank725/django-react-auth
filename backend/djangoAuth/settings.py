@@ -140,6 +140,7 @@ REST_FRAMEWORK = {
     ),
     # 'DEFAULT_RENDERER_CLASSES':('rest_framework.renderers.JSONRenderer',)    #To disable browserable api in production
 }
+# Permission Classes : AllowAny, IsAuthenticated, IsAdminUser, IsAuthenticatedOrReadOnly
 
 from datetime import timedelta 
 SIMPLE_JWT = {

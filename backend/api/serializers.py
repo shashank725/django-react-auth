@@ -18,6 +18,7 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
             'password':{'write_only': True}
             }
 
+    #Object level validation
     # Validate password and confrim password while Registration
     def validate(self, attrs):           #attrs (variable) is a dictionary of all the fields in the request
         password = attrs.get('password')
